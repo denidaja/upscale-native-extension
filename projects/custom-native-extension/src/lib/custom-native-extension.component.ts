@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {
+  Product,
   ProductService,
 } from "@upscale/service-client-angular";
 
@@ -19,12 +20,24 @@ export class CustomNativeExtensionComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.productService.getProductById("prod_id_8835").subscribe((product) => {
-      this.productName = product.name;
-      console.log(this.productName);
+    let tokenizedURL = window.location.href.split("/");
+    let productId = tokenizedURL[tokenizedURL.length - 1];
 
-      this.timesBought = product['timesBought'] ?? null;
+    let observer = this.productService.getProductById(productId).subscribe({
+      next: this.readProduct, error: console.log, complete: () => this.streamEnded(observer)
     });
+  }
+
+  streamEnded(observer: any): void {
+    observer.unsubscribe();
+  }
+
+
+  readProduct(product: Product): void {
+    this.productName = product.name;
+    this.timesBought = product['timesBought'] ?? null;
+
+    console.log(this.productName);
   }
 
 }
