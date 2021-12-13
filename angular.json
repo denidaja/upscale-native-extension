@@ -3,5 +3,37 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-  }
+    "custom-native-extension": {
+      "projectType": "library",
+      "root": "projects/custom-native-extension",
+      "sourceRoot": "projects/custom-native-extension/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/custom-native-extension/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/custom-native-extension/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/custom-native-extension/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/custom-native-extension/src/test.ts",
+            "tsConfig": "projects/custom-native-extension/tsconfig.spec.json",
+            "karmaConfig": "projects/custom-native-extension/karma.conf.js"
+          }
+        }
+      }
+    }
+  },
+  "defaultProject": "custom-native-extension"
 }
