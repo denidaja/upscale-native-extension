@@ -7,7 +7,7 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "pack" : "rm ./custom-native-extension-0.0.1.tgz && npm run build custom-native-extension -- --configuration=production && npm pack ./dist/custom-native-extension"
+    "pack" : "rm ./custom-native-extension-0.0.1.tgz && npm run build custom-native-extension -- --configuration=production && npm pack ./dist"
   },
   "private": true,
   "dependencies": {
