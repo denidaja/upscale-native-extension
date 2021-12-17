@@ -10,7 +10,7 @@ import {CommonModule} from "@angular/common";
   ],
   exports: [CustomNativeExtensionComponent]
 })
-export class CustomNativeExtensionModule {
+export class UpscaleExtensionModule {
   constructor(private registrationServices: RegistrationService,) {
     // the value 'my-custom-component' has to be defined used in Workbench as the Native Extension "Key"
     this.registrationServices.register('my-custom-component', CustomNativeExtensionComponent);

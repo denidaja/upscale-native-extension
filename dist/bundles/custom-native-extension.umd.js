@@ -76,20 +76,20 @@
                     }]
             }], ctorParameters: function () { return [{ type: i1__namespace.ProductService }]; } });
 
-    var CustomNativeExtensionModule = /** @class */ (function () {
-        function CustomNativeExtensionModule(registrationServices) {
+    var UpscaleExtensionModule = /** @class */ (function () {
+        function UpscaleExtensionModule(registrationServices) {
             this.registrationServices = registrationServices;
             // the value 'my-custom-component' has to be defined used in Workbench as the Native Extension "Key"
             this.registrationServices.register('my-custom-component', CustomNativeExtensionComponent);
         }
-        return CustomNativeExtensionModule;
+        return UpscaleExtensionModule;
     }());
-    CustomNativeExtensionModule.ɵfac = i0__namespace.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "12.0.5", ngImport: i0__namespace, type: CustomNativeExtensionModule, deps: [{ token: i1__namespace$1.RegistrationService }], target: i0__namespace.ɵɵFactoryTarget.NgModule });
-    CustomNativeExtensionModule.ɵmod = i0__namespace.ɵɵngDeclareNgModule({ minVersion: "12.0.0", version: "12.0.5", ngImport: i0__namespace, type: CustomNativeExtensionModule, declarations: [CustomNativeExtensionComponent], imports: [i2.CommonModule], exports: [CustomNativeExtensionComponent] });
-    CustomNativeExtensionModule.ɵinj = i0__namespace.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "12.0.5", ngImport: i0__namespace, type: CustomNativeExtensionModule, imports: [[
+    UpscaleExtensionModule.ɵfac = i0__namespace.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "12.0.5", ngImport: i0__namespace, type: UpscaleExtensionModule, deps: [{ token: i1__namespace$1.RegistrationService }], target: i0__namespace.ɵɵFactoryTarget.NgModule });
+    UpscaleExtensionModule.ɵmod = i0__namespace.ɵɵngDeclareNgModule({ minVersion: "12.0.0", version: "12.0.5", ngImport: i0__namespace, type: UpscaleExtensionModule, declarations: [CustomNativeExtensionComponent], imports: [i2.CommonModule], exports: [CustomNativeExtensionComponent] });
+    UpscaleExtensionModule.ɵinj = i0__namespace.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "12.0.5", ngImport: i0__namespace, type: UpscaleExtensionModule, imports: [[
                 i2.CommonModule
             ]] });
-    i0__namespace.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "12.0.5", ngImport: i0__namespace, type: CustomNativeExtensionModule, decorators: [{
+    i0__namespace.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "12.0.5", ngImport: i0__namespace, type: UpscaleExtensionModule, decorators: [{
                 type: i0.NgModule,
                 args: [{
                         declarations: [CustomNativeExtensionComponent],
@@ -109,8 +109,8 @@
      */
 
     exports.CustomNativeExtensionComponent = CustomNativeExtensionComponent;
-    exports.CustomNativeExtensionModule = CustomNativeExtensionModule;
     exports.CustomNativeExtensionService = CustomNativeExtensionService;
+    exports.UpscaleExtensionModule = UpscaleExtensionModule;
 
     Object.defineProperty(exports, '__esModule', { value: true });
 
